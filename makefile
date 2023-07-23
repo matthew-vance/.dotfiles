@@ -3,11 +3,9 @@
 
 install:
 	stow --verbose --ignore='.DS_Store' --target=$$HOME home
-	stow --verbose --ignore='.DS_Store' --target=$$HOME/.config config
 
 uninstall:
 	stow -D --verbose --ignore='.DS_Store' --target=$$HOME home
-	stow -D --verbose --ignore='.DS_Store' --target=$$HOME/.config config
 
 help:
 	@echo "help"
