@@ -1,0 +1,10 @@
+# env
+.DS_Store
+.vscode/
+*.bak
+*.backup
+_tmp/
+.tmp/
+
+# plugins
+**/*/plugins/
