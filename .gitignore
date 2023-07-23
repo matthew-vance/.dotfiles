@@ -6,8 +6,5 @@
 _tmp/
 .tmp/
 
-# plugins
-**/*/plugins/
-
 # local
 .zsh_history

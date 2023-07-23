@@ -2,7 +2,7 @@
 
 # https://github.com/mattmc3/zsh_unplugged
 
-ZPLUGINDIR=${ZPLUGINDIR:-${ZDOTDIR:-$HOME/.config/zsh}/plugins}
+ZPLUGINDIR=${HOME}/zsh/plugins}
 
 # Clone zsh_unplugged and use it as a micro plugin manager.
 if [[ ! -d $ZPLUGINDIR/zsh_unplugged ]]; then
