@@ -1,5 +1,25 @@
 #!/usr/bin/env zsh
 
+export HISTFILE=~/.zsh_history
+export HISTFILESIZE=25000
+export HISTSIZE=25000
+
+# history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt share_history
+
+# directories
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
+
+
 # TODO: auto source all files in the config dir
 . ${ZDOTDIR}/aliases.zsh
 . ${ZDOTDIR}/plugins.zsh

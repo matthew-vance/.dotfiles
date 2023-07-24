@@ -5,6 +5,3 @@
 *.backup
 _tmp/
 .tmp/
-
-# local
-.zsh_history
