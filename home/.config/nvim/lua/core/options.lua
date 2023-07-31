@@ -42,3 +42,4 @@ o.scrolloff = 8
 o.signcolumn = "yes"
 o.updatetime = 50
 o.colorcolumn = "80,100,120"
+o.autoread = true

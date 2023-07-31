@@ -34,7 +34,13 @@ return {
               ["<C-x>"] = actions.delete_buffer,
             },
           },
+          file_ignore_patterns = { ".git" },
         },
+        pickers = {
+          find_files = {
+            hidden = true,
+          },
+        }
       }
     end,
     config = function(_, opts)
