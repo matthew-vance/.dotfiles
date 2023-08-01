@@ -1,6 +1,7 @@
 local s = vim.keymap.set
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 s("i", "jj", "<Esc>", { desc = "Go to Normal mode" })
 
