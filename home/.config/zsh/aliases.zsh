@@ -44,6 +44,7 @@ alias s="search"
 alias so="source ${ZDOTDIR}/.zshrc"
 
 alias t="tmux"
+alias to="tmux new -s"
 alias ta="tmux a"
 alias t1="tmux a -t 1"
 alias t2="tmux a -t 2"
