@@ -1,8 +1,9 @@
 #!/usr/bin/env zsh
 
-export HISTFILE=~/.zsh_history
+export HISTFILE=$HOME/.zsh_history
 export HISTFILESIZE=25000
-export HISTSIZE=25000
+export HISTSIZE=30000
+export SAVEHIST=25000
 
 if [[ $OSTYPE == 'linux'* ]]; then
   export PATH=$PATH:/usr/local/go/bin
@@ -10,6 +11,7 @@ if [[ $OSTYPE == 'linux'* ]]; then
 fi
 
 # history
+setopt inc_append_history
 setopt extended_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
