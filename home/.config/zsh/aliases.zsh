@@ -16,9 +16,17 @@ alias 7="cd -7"
 alias 8="cd -8"
 alias 9="cd -9"
 
+if [[ $OSTYPE == 'linux'* ]]; then
+  alias copy='xclip -selection clipboard'
+  alias paste='xclip -o -selection clipboard'
+else
+  alias copy="pbcopy"
+  alias paste="pbpaste"
+fi
+
 alias a="alias | fzf --border --height 50% | rg -o '^[^=]+' | copy"
 alias c="clear"
-alias copy="pbcopy"
+
 alias vim="nvim"
 
 alias h="history"
@@ -33,8 +41,6 @@ alias l="ls"
 alias la="l --all --header"
 alias ll="l --all --header --long"
 alias lg="lazygit"
-alias lzd="lazydocker"
-alias paste="pbpaste"
 
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias uuidc="uuid | copy"

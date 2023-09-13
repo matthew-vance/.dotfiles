@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+if [[ $OSTYPE == 'linux'* ]]; then
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+  source /usr/share/doc/fzf/examples/completion.zsh
+fi
+
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'
@@ -10,7 +15,7 @@ export FZF_CTRL_T_OPTS="
 export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window up:3:hidden:wrap
   --bind 'ctrl-/:toggle-preview'
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | copy)+abort'
   --color header:italic
   --header 'Press CTRL-Y to copy command into clipboard'"
 
