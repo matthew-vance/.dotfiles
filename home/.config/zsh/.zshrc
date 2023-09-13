@@ -4,6 +4,11 @@ export HISTFILE=~/.zsh_history
 export HISTFILESIZE=25000
 export HISTSIZE=25000
 
+if [[ $OSTYPE == 'linux'* ]]; then
+  export PATH=$PATH:/usr/local/go/bin
+  export PATH=$PATH:$HOME/go/bin
+fi
+
 # history
 setopt extended_history
 setopt hist_expire_dups_first
@@ -30,3 +35,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 unset zle_bracketed_paste
+
+if [[ -f "$HOME/.agent-bridge.sh" ]]; then
+  source "$HOME/.agent-bridge.sh"
+fi
