@@ -1,8 +1,12 @@
 #!/usr/bin/env zsh
 
 if [[ $OSTYPE == 'linux'* ]]; then
-  source /usr/share/doc/fzf/examples/key-bindings.zsh
-  source /usr/share/doc/fzf/examples/completion.zsh
+  if [[ -f /etc/redhat-release ]]; then
+    source /usr/share/fzf/shell/key-bindings.zsh
+  elif [[ -f /etc/debian_version ]]; then
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+    source /usr/share/doc/fzf/examples/completion.zsh
+  fi
 fi
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
