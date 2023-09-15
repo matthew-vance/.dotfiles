@@ -5,6 +5,7 @@ alias -g ....="../../.."
 alias -g .....="../../../.."
 alias -g ......="../../../../.."
 
+alias cd..='cd ..'
 alias -- -="cd -"
 alias 1="cd -1"
 alias 2="cd -2"
@@ -40,6 +41,7 @@ alias ls="exa"
 alias l="ls"
 alias la="l --all --header"
 alias ll="l --all --header --long"
+
 alias lg="lazygit"
 
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
@@ -59,6 +61,9 @@ alias t4="tmux a -t 4"
 alias tk="tmux kill-session -t"
 alias tka="tmux kill-session -a"
 alias tl="tmux ls"
+
+alias path="echo \"${PATH}\" | tr ':' '\n'"
+alias spath="path | fzf --border --height 50% | copy"
 
 # What's running on this port?
 rop() {
