@@ -12,8 +12,11 @@ sindresorhus/pure kind:fpath
 
 # misc
 zdharma-continuum/fast-syntax-highlighting kind:defer
-zsh-users/zsh-completions path:src kind:fpath
 romkatv/zsh-bench kind:path
+
+# completions
+zsh-users/zsh-completions path:src kind:fpath
+belak/zsh-utils path:completion
 
 # final
 zsh-users/zsh-history-substring-search

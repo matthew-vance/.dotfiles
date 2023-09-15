@@ -7,6 +7,5 @@ _tmp/
 .tmp/
 
 # zsh
-.zcompdump*
 .antidote
 .zsh_plugins.zsh
