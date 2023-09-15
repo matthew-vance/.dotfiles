@@ -1,7 +1,20 @@
-sindresorhus/pure kind:fpath
-zsh-users/zsh-completions
+# regular
 rupa/z
 davidde/git
-zdharma/fast-syntax-highlighting kind:defer
-zsh-users/zsh-history-substring-search kind:defer
+
+# local
+$ZDOTDIR/aliases.zsh
+$ZDOTDIR/fzf.zsh
+$ZDOTDIR/node.zsh
+
+# prompt
+sindresorhus/pure kind:fpath
+
+# misc
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-completions path:src kind:fpath
+romkatv/zsh-bench kind:path
+
+# final
+zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions kind:defer
