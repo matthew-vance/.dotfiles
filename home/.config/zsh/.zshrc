@@ -26,6 +26,9 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
+[[ -d ${ZDOTDIR:-~}/.antidote ]] ||
+  git clone https://github.com/mattmc3/antidote ${ZDOTDIR:-~}/.antidote
+
 
 # TODO: auto source all files in the config dir
 . ${ZDOTDIR}/aliases.zsh
@@ -33,8 +36,7 @@ setopt pushdminus
 . ${ZDOTDIR}/fzf.zsh
 . ${ZDOTDIR}/node.zsh
 
-autoload -U promptinit; promptinit
-prompt pure
+autoload -Uz promptinit && promptinit && prompt pure
 
 unset zle_bracketed_paste
 

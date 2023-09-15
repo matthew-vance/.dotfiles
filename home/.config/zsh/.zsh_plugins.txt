@@ -1,0 +1,7 @@
+sindresorhus/pure kind:fpath
+zsh-users/zsh-completions
+rupa/z
+davidde/git
+zdharma/fast-syntax-highlighting kind:defer
+zsh-users/zsh-history-substring-search kind:defer
+zsh-users/zsh-autosuggestions kind:defer

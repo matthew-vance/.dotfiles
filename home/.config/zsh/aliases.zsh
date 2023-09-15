@@ -60,8 +60,6 @@ alias tk="tmux kill-session -t"
 alias tka="tmux kill-session -a"
 alias tl="tmux ls"
 
-eval $(thefuck --alias)
-
 # What's running on this port?
 rop() {
   lsof -i -P | rg LISTEN | rg :$1

@@ -1,27 +1,10 @@
 #!/usr/bin/env zsh
 
-# https://github.com/mattmc3/zsh_unplugged
+# https://getantidote.github.io/
+[[ -d ${ZDOTDIR:-~}/.antidote ]] ||
+  git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
 
-ZPLUGINDIR=${HOME}/zsh/plugins
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+antidote load
 
-# Clone zsh_unplugged and use it as a micro plugin manager.
-if [[ ! -d $ZPLUGINDIR/zsh_unplugged ]]; then
-  git clone --quiet https://github.com/mattmc3/zsh_unplugged $ZPLUGINDIR/zsh_unplugged
-fi
-source $ZPLUGINDIR/zsh_unplugged/zsh_unplugged.zsh
-
-plugins=(
-  #regular
-  sindresorhus/pure
-  zsh-users/zsh-completions
-  rupa/z
-  davidde/git
-
-  # deferred
-  romkatv/zsh-defer
-  zdharma/fast-syntax-highlighting
-  zsh-users/zsh-history-substring-search
-  zsh-users/zsh-autosuggestions
-)
-
-plugin-load $plugins
+source ${ZDOTDIR}/.zsh_plugins.zsh
