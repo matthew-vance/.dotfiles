@@ -2,7 +2,7 @@ return {
   "nvim-telescope/telescope.nvim",
   branch = "0.1.x",
   dependencies = {
-    "nvim-lua/plenary.nvim",
+    "plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
   },
@@ -37,11 +37,10 @@ return {
           },
         },
         vimgrep_arguments = vimgrep_arguments,
-        file_ignore_patterns = { ".git/*", "node_modules/*" },
       },
       pickers = {
         find_files = {
-          hidden = true,
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
         },
       },
     }

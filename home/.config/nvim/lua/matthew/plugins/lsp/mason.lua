@@ -1,34 +1,36 @@
 return {
   "williamboman/mason.nvim",
-  dependencies = {
-    "williamboman/mason-lspconfig.nvim",
-    "jayp0521/mason-null-ls.nvim",
+  cmd = "Mason",
+  keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
+  build = ":MasonUpdate",
+  opts = {
+    ensure_installed = {
+      "beautysh",
+      "eslint_d",
+      "prettierd",
+      "stylua",
+    },
+    automatic_installation = true,
   },
-  config = function()
+  config = function(_, opts)
     local mason = require("mason")
-    local mason_lspconfig = require("mason-lspconfig")
-    local mason_null_ls = require("mason-null-ls")
+    local mason_registry = require("mason-registry")
 
-    mason.setup()
+    local function ensure_installed()
+      for _, package in ipairs(opts.ensure_installed) do
+        local p = mason_registry.get_package(package)
+        if not p:is_installed() then
+          p:install()
+        end
+      end
+    end
 
-    mason_lspconfig.setup({
-      ensure_installed = {
-        "cssls",
-        "emmet_ls",
-        "html",
-        "lua_ls",
-        "tsserver",
-      },
-      automatic_installation = true,
-    })
+    mason.setup(opts)
 
-    mason_null_ls.setup({
-      ensure_installed = {
-        "eslint_d",
-        "prettierd",
-        "stylua",
-      },
-      automatic_installation = true,
-    })
+    if mason_registry.refresh then
+      mason_registry.refresh(ensure_installed)
+    else
+      ensure_installed()
+    end
   end,
 }

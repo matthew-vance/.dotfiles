@@ -8,6 +8,7 @@ return {
     highlight = { enable = true },
     indent = { enable = true },
     ensure_installed = {
+      "astro",
       "bash",
       "c",
       "css",
@@ -15,19 +16,26 @@ return {
       "dockerfile",
       "gitignore",
       "go",
+      "gomod",
+      "gosum",
       "html",
+      "http",
       "javascript",
+      "jq",
       "jsdoc",
       "json",
       "lua",
       "luadoc",
       "luap",
+      "make",
       "markdown",
       "markdown_inline",
       "python",
       "query",
       "regex",
+      "sql",
       "terraform",
+      "toml",
       "tsx",
       "typescript",
       "vim",
@@ -36,4 +44,9 @@ return {
     },
     auto_install = true,
   },
+  config = function(_, opts)
+    local treesitter = require("nvim-treesitter.configs")
+
+    treesitter.setup(opts)
+  end,
 }

@@ -1,15 +1,28 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
+  dependencies = {
+    "mason.nvim",
+  },
   event = { "BufReadPre", "BufNewFile" },
-  config = function()
+  opts = function()
     local null_ls = require("null-ls")
 
-    null_ls.setup({
+    local d = null_ls.builtins.diagnostics
+    local f = null_ls.builtins.formatting
+    local ca = null_ls.builtins.code_actions
+
+    return {
       sources = {
-        null_ls.builtins.formatting.eslint_d,
-        null_ls.builtins.formatting.prettierd,
-        null_ls.builtins.formatting.stylua,
+        d.eslint_d,
+        d.zsh,
+
+        ca.eslint_d,
+
+        f.beautysh,
+        f.eslint_d,
+        f.prettierd,
+        f.stylua,
       },
-    })
+    }
   end,
 }
