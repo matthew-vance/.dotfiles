@@ -9,3 +9,4 @@ _tmp/
 # zsh
 .antidote
 .zsh_plugins.zsh
+.zcompdump*

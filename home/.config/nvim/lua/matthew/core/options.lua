@@ -37,7 +37,6 @@ o.wrap = false
 o.breakindent = true
 
 -- misc
-o.completeopt = "menu,menuone,noinsert"
 o.scrolloff = 8
 o.signcolumn = "yes"
 o.updatetime = 50

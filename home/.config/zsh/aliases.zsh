@@ -23,6 +23,7 @@ if [[ $OSTYPE == 'linux'* ]]; then
 else
   alias copy="pbcopy"
   alias paste="pbpaste"
+  alias batcat="bat"
 fi
 
 alias a="alias | fzf --border --height 50% | rg -o '^[^=]+' | copy"
@@ -47,7 +48,7 @@ alias lg="lazygit"
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias uuidc="uuid | copy"
 
-alias search="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
+alias search="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias s="search"
 alias so="source ${ZDOTDIR}/.zshrc"
 
