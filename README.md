@@ -16,6 +16,8 @@ This whole thing basically works by mirroring the layout of the home directory a
 - `bat`
 - `fnm`
 - `exa`
+- `fortune`
+- `figlet`
 
 ## Usage
 
