@@ -18,12 +18,12 @@ alias 8="cd -8"
 alias 9="cd -9"
 
 if [[ $OSTYPE == 'linux'* ]]; then
-  alias copy='xclip -selection clipboard'
-  alias paste='xclip -o -selection clipboard'
+    alias copy='xclip -selection clipboard'
+    alias paste='xclip -o -selection clipboard'
 else
-  alias copy="pbcopy"
-  alias paste="pbpaste"
-  alias batcat="bat"
+    alias copy="pbcopy"
+    alias paste="pbpaste"
+    alias batcat="bat"
 fi
 
 alias a="alias | fzf --border --height 50% | rg -o '^[^=]+' | copy"
@@ -68,5 +68,5 @@ alias spath="path | fzf --border --height 50% | copy"
 
 # What's running on this port?
 rop() {
-  lsof -i -P | rg LISTEN | rg :$1
+    lsof -i -P | rg LISTEN | rg :$1
 }
