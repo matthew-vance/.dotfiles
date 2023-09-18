@@ -8,6 +8,7 @@ return {
       require("mini.indentscope").setup()
       require("mini.cursorword").setup()
       require("mini.move").setup()
+      require("mini.ai").setup()
       require("mini.starter").setup({
         header = function()
           local header = vim.fn.system("figlet -f slant 'neovim'")
