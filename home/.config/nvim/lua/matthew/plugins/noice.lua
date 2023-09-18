@@ -3,7 +3,18 @@ return {
   event = "VeryLazy",
   dependencies = {
     "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
+    {
+      "rcarriga/nvim-notify",
+      keys = {
+        {
+          "<leader>nc",
+          function()
+            require("notify").dismiss({ silent = true, pending = true })
+          end,
+          desc = "Clear all Notifications",
+        },
+      },
+    },
   },
   opts = {
     lsp = {

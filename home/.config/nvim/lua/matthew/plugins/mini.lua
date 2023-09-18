@@ -54,6 +54,7 @@ return {
           { mode = "n", keys = "<Leader>h", desc = "+Harpoon" },
           { mode = "n", keys = "<Leader>x", desc = "+Trouble" },
           { mode = "n", keys = "<Leader>b", desc = "+Buffer" },
+          { mode = "n", keys = "<Leader>n", desc = "+Notification" },
         },
       })
 

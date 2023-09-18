@@ -6,9 +6,10 @@ return {
   opts = {
     ensure_installed = {
       "beautysh",
-      "eslint_d",
+      "eslint-lsp",
+      "gopls",
       "hadolint",
-      "prettierd",
+      "prettier",
       "shellcheck",
       "stylua",
     },

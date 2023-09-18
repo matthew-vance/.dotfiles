@@ -9,21 +9,18 @@ return {
 
     local d = null_ls.builtins.diagnostics
     local f = null_ls.builtins.formatting
-    local ca = null_ls.builtins.code_actions
 
     return {
       sources = {
-        d.eslint_d,
+        d.eslint,
         d.hadolint,
         d.shellcheck,
         d.zsh,
 
-        ca.eslint_d,
-
         f.beautysh,
-        f.eslint_d,
+        f.eslint,
         f.gofmt,
-        f.prettierd,
+        f.prettier,
         f.stylua,
       },
     }
@@ -44,9 +41,6 @@ return {
             callback = function()
               vim.lsp.buf.format({
                 async = false,
-                filter = function()
-                  return client.name == "null-ls"
-                end,
               })
             end,
           })

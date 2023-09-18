@@ -6,7 +6,6 @@ return {
     dependencies = {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
-      "hrsh7th/cmp-cmdline",
       "hrsh7th/cmp-nvim-lsp",
       "saadparwaiz1/cmp_luasnip",
       "onsails/lspkind.nvim",
@@ -17,9 +16,7 @@ return {
       local lspkind = require("lspkind")
 
       return {
-        completion = {
-          completeopt = "menu,menuone,noinsert,preview,noselect",
-        },
+        completion = { completeopt = "menu,menuone,noinsert" },
         snippet = {
           expand = function(args)
             require("luasnip").lsp_expand(args.body)
@@ -75,7 +72,7 @@ return {
         "<tab>",
         function()
           return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next"
-            or "<tab>"
+              or "<tab>"
         end,
         expr = true,
         silent = true,
