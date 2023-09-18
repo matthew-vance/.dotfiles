@@ -7,7 +7,9 @@ return {
     ensure_installed = {
       "beautysh",
       "eslint_d",
+      "hadolint",
       "prettierd",
+      "shellcheck",
       "stylua",
     },
     automatic_installation = true,

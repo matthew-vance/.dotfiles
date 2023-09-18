@@ -14,6 +14,8 @@ return {
     return {
       sources = {
         d.eslint_d,
+        d.hadolint,
+        d.shellcheck,
         d.zsh,
 
         ca.eslint_d,
