@@ -8,6 +8,12 @@ return {
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-nvim-lsp",
       "saadparwaiz1/cmp_luasnip",
+      {
+        "zbirenbaum/copilot-cmp",
+        config = function()
+          require("copilot_cmp").setup()
+        end,
+      },
       "onsails/lspkind.nvim",
     },
     opts = function()
@@ -40,6 +46,7 @@ return {
           }),
         }),
         sources = cmp.config.sources({
+          { name = "copilot" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "buffer" },
@@ -50,6 +57,7 @@ return {
           format = lspkind.cmp_format({
             maxwidth = 50,
             ellipsis_char = "...",
+            symbol_map = { Copilot = "" },
           }),
         },
       }
@@ -66,32 +74,6 @@ return {
     opts = {
       history = true,
       delete_check_events = "TextChanged",
-    },
-    keys = {
-      {
-        "<tab>",
-        function()
-          return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next"
-              or "<tab>"
-        end,
-        expr = true,
-        silent = true,
-        mode = "i",
-      },
-      {
-        "<tab>",
-        function()
-          require("luasnip").jump(1)
-        end,
-        mode = "s",
-      },
-      {
-        "<s-tab>",
-        function()
-          require("luasnip").jump(-1)
-        end,
-        mode = { "i", "s" },
-      },
     },
   },
 }
