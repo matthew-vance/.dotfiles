@@ -10,6 +10,10 @@ if [[ $OSTYPE == 'linux'* ]]; then
   export PATH=$PATH:$HOME/go/bin
 fi
 
+if [[ $OSTYPE == 'darwin'* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # history
 setopt inc_append_history
 setopt extended_history

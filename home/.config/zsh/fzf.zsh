@@ -7,6 +7,8 @@ if [[ $OSTYPE == 'linux'* ]]; then
     source /usr/share/doc/fzf/examples/key-bindings.zsh
     source /usr/share/doc/fzf/examples/completion.zsh
   fi
+elif [[ $OSTYPE == 'darwin'* ]]; then
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fi
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
