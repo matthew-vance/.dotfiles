@@ -7,14 +7,7 @@ export SAVEHIST=25000
 
 export PATH="$HOME/.local/bin:$PATH"
 
-if [[ $OSTYPE == 'linux'* ]]; then
-  export PATH=$PATH:/usr/local/go/bin
-  export PATH=$PATH:$HOME/go/bin
-fi
-
-if [[ $OSTYPE == 'darwin'* ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # history
 setopt inc_append_history
