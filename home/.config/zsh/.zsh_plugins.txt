@@ -6,6 +6,8 @@ davidde/git
 $ZDOTDIR/aliases.zsh
 $ZDOTDIR/fzf.zsh
 $ZDOTDIR/node.zsh
+$ZDOTDIR/python.zsh
+$ZDOTDIR/ruby.zsh
 
 # prompt
 sindresorhus/pure kind:fpath

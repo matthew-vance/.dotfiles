@@ -10,3 +10,4 @@ _tmp/
 .antidote
 .zsh_plugins.zsh
 .zcompdump*
+.zsh_sessions

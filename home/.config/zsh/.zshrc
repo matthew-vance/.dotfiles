@@ -5,6 +5,8 @@ export HISTFILESIZE=25000
 export HISTSIZE=30000
 export SAVEHIST=25000
 
+export PATH="$HOME/.local/bin:$PATH"
+
 if [[ $OSTYPE == 'linux'* ]]; then
   export PATH=$PATH:/usr/local/go/bin
   export PATH=$PATH:$HOME/go/bin
