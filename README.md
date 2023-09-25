@@ -15,7 +15,6 @@ This whole thing basically works by mirroring the layout of the home directory a
 - `ripgrep`
 - `bat`
 - `fnm`
-- `lsd`
 - `fortune`
 - `figlet`
 

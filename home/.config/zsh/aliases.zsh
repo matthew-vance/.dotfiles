@@ -38,11 +38,11 @@ alias h3="history -30"
 alias hs="history | fzf --border --height 50% | copy"
 
 alias ip="curl -s https://icanhazip.com; echo"
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -a'
-alias ll='ls -la'
-alias lt='ls --tree -a'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+alias sl="ls"
 
 alias lg="lazygit"
 
