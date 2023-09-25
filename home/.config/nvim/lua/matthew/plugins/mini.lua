@@ -7,16 +7,6 @@ return {
       require("mini.comment").setup()
       require("mini.indentscope").setup()
       require("mini.cursorword").setup()
-      require("mini.move").setup()
-      require("mini.ai").setup()
-      require("mini.starter").setup({
-        header = function()
-          local header = vim.fn.system("figlet -f slant 'neovim'")
-          local fortune = vim.fn.system("fortune -s -n 280")
-          return header .. "\n" .. fortune
-        end,
-      })
-
       require("mini.animate").setup({
         scroll = {
           enable = false,
@@ -51,7 +41,6 @@ return {
           clue.gen_clues.windows(),
           clue.gen_clues.z(),
           { mode = "n", keys = "<Leader>f", desc = "+Find" },
-          { mode = "n", keys = "<Leader>h", desc = "+Harpoon" },
           { mode = "n", keys = "<Leader>x", desc = "+Trouble" },
           { mode = "n", keys = "<Leader>b", desc = "+Buffer" },
           { mode = "n", keys = "<Leader>n", desc = "+Notification" },
