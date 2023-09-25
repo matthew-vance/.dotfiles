@@ -7,11 +7,6 @@ return {
       require("mini.comment").setup()
       require("mini.indentscope").setup()
       require("mini.cursorword").setup()
-      require("mini.animate").setup({
-        scroll = {
-          enable = false,
-        },
-      })
 
       local clue = require("mini.clue")
       clue.setup({
