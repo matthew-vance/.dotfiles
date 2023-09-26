@@ -1,6 +1,5 @@
 # env
 .DS_Store
-.vscode/
 *.bak
 *.backup
 _tmp/
@@ -11,3 +10,10 @@ _tmp/
 .zsh_plugins.zsh
 .zcompdump*
 .zsh_sessions
+
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
