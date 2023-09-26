@@ -28,7 +28,8 @@ setopt pushdminus
 # plugins
 . ${ZDOTDIR}/plugins.zsh
 
-autoload -Uz promptinit && promptinit && prompt pure
+autoload -U promptinit; promptinit
+prompt pure
 
 unset zle_bracketed_paste
 
