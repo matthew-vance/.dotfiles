@@ -26,7 +26,7 @@ alias c="clear"
 
 alias vim="nvim"
 
-alias bu="brew update && brew upgrade && brew cleanup && brew doctor"
+alias bup="brew update && brew upgrade && brew cleanup && brew doctor"
 
 alias h="history"
 alias h1="history -10"
@@ -69,6 +69,8 @@ alias spath="path | fzf --border --height 50% | copy"
 alias ping="ping -c 5"
 
 alias now='date +"%T"'
+
+alias k="kubectl"
 
 # What's running on this port?
 rop() {
