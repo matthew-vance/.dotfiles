@@ -70,6 +70,7 @@ alias ping="ping -c 5"
 
 alias now='date +"%T"'
 
+alias tf="terraform"
 alias k="kubectl"
 
 # What's running on this port?
