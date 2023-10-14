@@ -34,5 +34,5 @@ prompt pure
 unset zle_bracketed_paste
 
 if [[ -f "$HOME/.agent-bridge.sh" ]]; then
-  source "$HOME/.agent-bridge.sh"
+    source "$HOME/.agent-bridge.sh"
 fi
