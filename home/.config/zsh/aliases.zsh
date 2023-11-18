@@ -26,8 +26,6 @@ alias c="clear"
 
 alias vim="nvim"
 
-alias bup="brew update && brew upgrade && brew cleanup && brew doctor"
-
 alias h="history"
 alias h1="history -10"
 alias h2="history -20"
@@ -47,8 +45,7 @@ alias lg="lazygit"
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias uuidc="uuid | copy"
 
-alias search="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
-alias s="search"
+alias ff="rg --files -uu -g \"!.git\" | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 
 alias so="source ${ZDOTDIR}/.zshrc"
 

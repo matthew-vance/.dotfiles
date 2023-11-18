@@ -3,8 +3,10 @@ rupa/z
 davidde/git
 
 # local
+$ZDOTDIR/homebrew.zsh
 $ZDOTDIR/aliases.zsh
 $ZDOTDIR/fzf.zsh
+$ZDOTDIR/docker.zsh
 $ZDOTDIR/node.zsh
 $ZDOTDIR/python.zsh
 $ZDOTDIR/ruby.zsh
