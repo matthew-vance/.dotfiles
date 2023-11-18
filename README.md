@@ -9,12 +9,16 @@ This whole thing basically works by mirroring the layout of the home directory a
 - `git`
 - `make`
 - `zsh`
-- `tmux`
 - `neovim`
 - `fzf`
 - `ripgrep`
 - `bat`
-- `fnm`
+
+## Optional
+
+- `fnm` if using node
+- `pyenv` if using python
+- `rbenv` if using ruby
 
 ## Usage
 
@@ -25,3 +29,7 @@ make install
 ```sh
 make uninstall
 ```
+
+## Local config
+
+A `local.zsh` file can be placed in the `zsh` directory to add local shell config.

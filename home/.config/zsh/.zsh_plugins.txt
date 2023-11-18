@@ -8,6 +8,7 @@ $ZDOTDIR/fzf.zsh
 $ZDOTDIR/node.zsh
 $ZDOTDIR/python.zsh
 $ZDOTDIR/ruby.zsh
+$ZDOTDIR/1password.zsh
 
 # prompt
 sindresorhus/pure kind:fpath

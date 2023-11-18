@@ -10,6 +10,7 @@ _tmp/
 .zsh_plugins.zsh
 .zcompdump*
 .zsh_sessions
+local.zsh
 
 # vscode
 .vscode/*
