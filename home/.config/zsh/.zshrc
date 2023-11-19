@@ -7,7 +7,7 @@ export SAVEHIST=25000
 
 export PATH="$HOME/.local/bin:$PATH"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+
 
 # history
 setopt inc_append_history
@@ -27,6 +27,17 @@ setopt pushdminus
 
 # plugins
 . ${ZDOTDIR}/plugins.zsh
+
+if command -v brew &> /dev/null 2>&1; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
+if command -v aws &> /dev/null 2>&1; then
+  complete -C '/usr/local/bin/aws_completer' aws
+fi
 
 autoload -U promptinit; promptinit
 prompt pure
