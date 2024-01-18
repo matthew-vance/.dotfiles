@@ -49,17 +49,6 @@ alias ff="rg --files -uu -g \"!.git\" | fzf --preview 'bat --color=always --styl
 
 alias so="source ${ZDOTDIR}/.zshrc"
 
-alias t="tmux"
-alias to="tmux new -s"
-alias ta="tmux a"
-alias t1="tmux a -t 1"
-alias t2="tmux a -t 2"
-alias t3="tmux a -t 3"
-alias t4="tmux a -t 4"
-alias tk="tmux kill-session -t"
-alias tka="tmux kill-session -a"
-alias tl="tmux ls"
-
 alias path="echo \"${PATH}\" | tr ':' '\n'"
 alias spath="path | fzf --border --height 50% | copy"
 
@@ -69,6 +58,8 @@ alias now='date +"%T"'
 
 alias tf="terraform"
 alias k="kubectl"
+
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # What's running on this port?
 rop() {

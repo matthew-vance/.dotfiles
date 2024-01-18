@@ -39,6 +39,10 @@ if command -v aws &> /dev/null 2>&1; then
   complete -C '/usr/local/bin/aws_completer' aws
 fi
 
+if command -v terraform &> /dev/null 2>&1; then
+  complete -o nospace -C /opt/homebrew/bin/terraform terraform
+fi
+
 autoload -U promptinit; promptinit
 prompt pure
 
