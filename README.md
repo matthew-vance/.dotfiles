@@ -13,6 +13,7 @@ This whole thing basically works by mirroring the layout of the home directory a
 - `fzf`
 - `ripgrep`
 - `bat`
+- `kitty`
 
 ## Optional
 
