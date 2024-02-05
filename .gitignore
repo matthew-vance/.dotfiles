@@ -18,3 +18,6 @@ local.zsh
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# irb
+irb_history

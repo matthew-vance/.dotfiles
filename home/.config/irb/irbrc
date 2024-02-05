@@ -1,0 +1,5 @@
+Reline::Face.config(:completion_dialog) do |conf|
+  conf.define :default, foreground: :white, background: :bright_black
+  conf.define :enhanced, foreground: :white, background: :black
+  conf.define :scrollbar, foreground: :white, background: :blue
+end
