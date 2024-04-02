@@ -9,8 +9,8 @@ $ZDOTDIR/fzf.zsh
 $ZDOTDIR/docker.zsh
 $ZDOTDIR/node.zsh
 $ZDOTDIR/python.zsh
-$ZDOTDIR/ruby.zsh
 $ZDOTDIR/1password.zsh
+$ZDOTDIR/bun.zsh
 
 # prompt
 sindresorhus/pure kind:fpath
