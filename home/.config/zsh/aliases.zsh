@@ -37,10 +37,11 @@ alias ip="curl -s https://icanhazip.com; echo"
 alias ls='ls --color=auto'
 alias l='ls -CF'
 alias la='ls -A'
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias sl="ls"
 
 alias lg="lazygit"
+alias lzd="lazydocker"
 
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias uuidc="uuid | copy"
