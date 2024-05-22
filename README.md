@@ -19,6 +19,7 @@ This whole thing basically works by mirroring the layout of the home directory a
 
 - `fnm` if using node
 - `pyenv` if using python
+- `rbenv` if using ruby
 
 ## Usage
 
