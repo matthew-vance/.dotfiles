@@ -6,20 +6,7 @@ return {
       require("mini.ai").setup()
       require("mini.indentscope").setup()
       require("mini.pairs").setup()
-      require("mini.surround").setup({
-        mappings = {
-          add = "<leader>sa",
-          delete = "<leader>sd",
-          find = "<leader>sf",
-          find_left = "<leader>sF",
-          highlight = "<leader>sh",
-          replace = "<leader>sr",
-          update_n_lines = "<leader>sn",
-
-          suffix_last = "l",
-          suffix_next = "n",
-        },
-      })
+      require("mini.cursorword").setup()
       require("mini.files").setup({
         content = {
           filter = function(entry)
