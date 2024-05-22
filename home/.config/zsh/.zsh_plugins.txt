@@ -13,6 +13,7 @@ $ZDOTDIR/ruby.zsh
 $ZDOTDIR/1password.zsh
 $ZDOTDIR/bun.zsh
 $ZDOTDIR/android.zsh
+$ZDOTDIR/sdkman.zsh
 
 # prompt
 sindresorhus/pure kind:fpath
