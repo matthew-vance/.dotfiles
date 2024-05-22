@@ -3,70 +3,57 @@ return {
     "echasnovski/mini.nvim",
     lazy = false,
     config = function()
-      require("mini.pairs").setup()
-      require("mini.comment").setup()
+      require("mini.ai").setup()
       require("mini.indentscope").setup()
-      require("mini.cursorword").setup()
+      require("mini.pairs").setup()
+      require("mini.surround").setup({
+        mappings = {
+          add = "<leader>sa",
+          delete = "<leader>sd",
+          find = "<leader>sf",
+          find_left = "<leader>sF",
+          highlight = "<leader>sh",
+          replace = "<leader>sr",
+          update_n_lines = "<leader>sn",
 
-      local clue = require("mini.clue")
-      clue.setup({
-        triggers = {
-          { mode = "n", keys = "<Leader>" },
-          { mode = "x", keys = "<Leader>" },
-          { mode = "i", keys = "<C-x>" },
-          { mode = "n", keys = "g" },
-          { mode = "x", keys = "g" },
-          { mode = "n", keys = "'" },
-          { mode = "n", keys = "`" },
-          { mode = "x", keys = "'" },
-          { mode = "x", keys = "`" },
-          { mode = "n", keys = '"' },
-          { mode = "x", keys = '"' },
-          { mode = "i", keys = "<C-r>" },
-          { mode = "c", keys = "<C-r>" },
-          { mode = "n", keys = "<C-w>" },
-          { mode = "n", keys = "z" },
-          { mode = "x", keys = "z" },
-        },
-        clues = {
-          clue.gen_clues.builtin_completion(),
-          clue.gen_clues.g(),
-          clue.gen_clues.marks(),
-          clue.gen_clues.registers(),
-          clue.gen_clues.windows(),
-          clue.gen_clues.z(),
-          { mode = "n", keys = "<Leader>f", desc = "+Find" },
-          { mode = "n", keys = "<Leader>x", desc = "+Trouble" },
-          { mode = "n", keys = "<Leader>b", desc = "+Buffer" },
-          { mode = "n", keys = "<Leader>n", desc = "+Notification" },
+          suffix_last = "l",
+          suffix_next = "n",
         },
       })
-
       require("mini.files").setup({
+        content = {
+          filter = function(entry)
+            local skipDirs = { ".git" }
+            local skipFiles = { ".DS_Store" }
+
+            if entry.fs_type == "directory" then
+              for _, dir in ipairs(skipDirs) do
+                if entry.name == dir then
+                  return false
+                end
+              end
+            end
+
+            if entry.fs_type == "file" then
+              for _, file in ipairs(skipFiles) do
+                if entry.name == file then
+                  return false
+                end
+              end
+            end
+
+            return true
+          end,
+        },
         windows = {
           preview = true,
           width_focus = 30,
           width_preview = 30,
         },
       })
-
-      require("mini.surround").setup({
-        mappings = {
-          add = "gsa",
-          delete = "gsd",
-          find = "gsf",
-          find_left = "gsF",
-          highlight = "gsh",
-          replace = "gsr",
-          update_n_lines = "gsn",
-        },
-      })
-
-      require("mini.bufremove").setup()
     end,
     keys = function()
       local mini_files = require("mini.files")
-      local mini_bufremove = require("mini.bufremove")
 
       local mini_files_toggle = function()
         if not mini_files.close() then
@@ -81,20 +68,6 @@ return {
             mini_files_toggle()
           end,
           desc = "Toggle file browser",
-        },
-        {
-          "<leader>bd",
-          function()
-            mini_bufremove.delete(0, false)
-          end,
-          desc = "Delete buffer",
-        },
-        {
-          "<leader>bD",
-          function()
-            mini_bufremove.delete(0, true)
-          end,
-          desc = "Delete buffer (force)",
         },
       }
     end,
