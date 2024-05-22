@@ -28,6 +28,10 @@ setopt pushdminus
 # plugins
 . ${ZDOTDIR}/plugins.zsh
 
+if [[ -f "$ZDOTDIR/local.zsh" ]]; then
+    source "$ZDOTDIR/local.zsh"
+fi
+
 if command -v brew &> /dev/null 2>&1; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
@@ -47,7 +51,3 @@ autoload -U promptinit; promptinit
 prompt pure
 
 unset zle_bracketed_paste
-
-if [[ -f "$ZDOTDIR/local.zsh" ]]; then
-    source "$ZDOTDIR/local.zsh"
-fi
