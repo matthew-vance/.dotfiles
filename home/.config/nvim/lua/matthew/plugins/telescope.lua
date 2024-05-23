@@ -10,9 +10,14 @@ return {
     local builtin = require("telescope.builtin")
     return {
       { "<leader><space>", builtin.find_files, desc = "Find files" },
-      { "<leader>ff", builtin.find_files, desc = "Find files" },
-      { "<leader>f,", builtin.buffers, desc = "Find buffer" },
-      { "<leader>f/", builtin.live_grep, desc = "Find in files" },
+      {
+        "<leader>b",
+        function()
+          builtin.buffers({ sort_mru = true })
+        end,
+        desc = "Find buffer",
+      },
+      { "<leader>fi", builtin.live_grep, desc = "Find in files" },
       { "<leader>fw", builtin.grep_string, desc = "Find word" },
       { "<leader>f?", builtin.help_tags, desc = "Find in help" },
     }
