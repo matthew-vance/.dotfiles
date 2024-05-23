@@ -7,6 +7,7 @@ return {
       require("mini.indentscope").setup()
       require("mini.pairs").setup()
       require("mini.cursorword").setup()
+      require("mini.jump").setup()
       require("mini.files").setup({
         content = {
           filter = function(entry)
@@ -42,19 +43,20 @@ return {
     keys = function()
       local mini_files = require("mini.files")
 
-      local mini_files_toggle = function()
-        if not mini_files.close() then
-          mini_files.open()
-        end
-      end
-
       return {
         {
-          "<leader>'",
+          "<leader>fm",
           function()
-            mini_files_toggle()
+            mini_files.open(vim.api.nvim_buf_get_name(0), true)
           end,
-          desc = "Toggle file browser",
+          desc = "Open mini.files (Directory of Current File)",
+        },
+        {
+          "<leader>fM",
+          function()
+            mini_files.open(vim.uv.cwd(), true)
+          end,
+          desc = "Open mini.files (cwd)",
         },
       }
     end,
