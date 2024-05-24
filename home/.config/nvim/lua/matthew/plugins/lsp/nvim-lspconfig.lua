@@ -1,16 +1,13 @@
 return {
-  "williamboman/mason.nvim",
+  "neovim/nvim-lspconfig",
+  event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    "neovim/nvim-lspconfig",
-    "williamboman/mason-lspconfig.nvim",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "hrsh7th/cmp-nvim-lsp",
   },
   config = function()
-    local mason = require("mason")
     local lspconfig = require("lspconfig")
     local mason_lspconfig = require("mason-lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
-    local mason_tool_installer = require("mason-tool-installer")
 
     local keymap = vim.keymap
 
@@ -40,74 +37,12 @@ return {
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    mason.setup({
-      ui = {
-        icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗",
-        },
-      },
-    })
-
-    mason_lspconfig.setup({
-      ensure_installed = {
-        "gopls",
-        "tsserver",
-        "html",
-        "cssls",
-        "tailwindcss",
-        "lua_ls",
-        "emmet_ls",
-        "prismals",
-      },
-    })
-
     mason_lspconfig.setup_handlers({
       function(server_name)
         lspconfig[server_name].setup({
           capabilities = capabilities,
         })
       end,
-      ["emmet_ls"] = function()
-        lspconfig["emmet_ls"].setup({
-          capabilities = capabilities,
-          filetypes = {
-            "html",
-            "typescriptreact",
-            "javascriptreact",
-            "css",
-            "sass",
-            "scss",
-            "less",
-          },
-        })
-      end,
-      ["lua_ls"] = function()
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              diagnostics = {
-                globals = { "vim", "LazyVim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
-        })
-      end,
-    })
-
-    mason_tool_installer.setup({
-      ensure_installed = {
-        "prettier",
-        "prettierd",
-        "eslint_d",
-        "stylua",
-        "goimports",
-      },
     })
   end,
 }
