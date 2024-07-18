@@ -17,7 +17,6 @@ alias 7="cd -7"
 alias 8="cd -8"
 alias 9="cd -9"
 
-
 alias copy="pbcopy"
 alias paste="pbpaste"
 
@@ -34,10 +33,9 @@ alias hs="history | fzf --border --height 50% | copy"
 
 alias ip="curl -s https://icanhazip.com; echo"
 
-alias ls='ls --color=auto'
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -alFh'
+alias ls='eza --color=auto'
+alias la='ls --all'
+alias ll='ls --all --long --header --classify=auto'
 alias sl="ls"
 
 alias lg="lazygit"

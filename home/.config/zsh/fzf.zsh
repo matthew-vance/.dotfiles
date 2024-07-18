@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+# https://junegunn.github.io/fzf/
+
 source $ZDOTDIR/fzf/key-bindings.zsh
 source $ZDOTDIR/fzf/completion.zsh
 

@@ -9,11 +9,14 @@ This whole thing basically works by mirroring the layout of the home directory a
 - `git`
 - `make`
 - `zsh`
+- `brew`
 - `neovim`
 - `fzf`
 - `ripgrep`
 - `bat`
 - `kitty`
+- `starship`
+- `zoxide`
 
 ## Optional
 

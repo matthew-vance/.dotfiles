@@ -6,8 +6,6 @@ _tmp/
 .tmp/
 
 # zsh
-.antidote
-.zsh_plugins.zsh
 .zcompdump*
 .zsh_sessions
 local.zsh
@@ -18,6 +16,3 @@ local.zsh
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-
-# irb
-irb_history

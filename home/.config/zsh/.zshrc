@@ -7,8 +7,6 @@ export SAVEHIST=25000
 
 export PATH="$HOME/.local/bin:$PATH"
 
-
-
 # history
 setopt inc_append_history
 setopt extended_history
@@ -25,29 +23,24 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
-# plugins
-. ${ZDOTDIR}/plugins.zsh
-
-if [[ -f "$ZDOTDIR/local.zsh" ]]; then
-    source "$ZDOTDIR/local.zsh"
-fi
-
-if command -v brew &> /dev/null 2>&1; then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-fi
-
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-
-if command -v aws &> /dev/null 2>&1; then
-  complete -C '/usr/local/bin/aws_completer' aws
-fi
-
-if command -v terraform &> /dev/null 2>&1; then
-  complete -o nospace -C /opt/homebrew/bin/terraform terraform
-fi
-
-autoload -U promptinit; promptinit
-prompt pure
-
 unset zle_bracketed_paste
+
+# Configure tab completion
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu no
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --oneline --color=always $realpath'
+zstyle ':fzf-tab:*' switch-group '<' '>'
+
+# source local files
+for file in $ZDOTDIR/*.zsh; do
+    source "$file"
+done
+
+# init prompt - https://starship.rs/
+eval "$(starship init zsh)"
+
+# https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh --cmd cd)"
