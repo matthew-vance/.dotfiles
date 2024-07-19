@@ -2,9 +2,6 @@
 
 # https://junegunn.github.io/fzf/
 
-source $ZDOTDIR/fzf/key-bindings.zsh
-source $ZDOTDIR/fzf/completion.zsh
-
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'

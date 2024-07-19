@@ -35,12 +35,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --oneline --color=always $realp
 zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # source local files
-for file in $ZDOTDIR/*.zsh; do
-    source "$file"
+for file in $ZDOTDIR/**/*.zsh; do
+    . $file
 done
-
-# init prompt - https://starship.rs/
-eval "$(starship init zsh)"
-
-# https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init zsh --cmd cd)"
