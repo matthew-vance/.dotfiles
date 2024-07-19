@@ -5,24 +5,27 @@ This whole thing basically works by mirroring the layout of the home directory a
 
 ## Requirements
 
-- `stow`
-- `git`
-- `make`
-- `zsh`
-- `brew`
-- `neovim`
-- `fzf`
-- `ripgrep`
-- `bat`
-- `kitty`
-- `starship`
-- `zoxide`
+- `stow` - symlink manager
+- `git` - version control
+- `make` - install scripts
+- `zsh` - shell
+- `brew` - package manager
+- `neovim` - text editor
+- `fzf` - fuzzy finder
+- `ripgrep` - faster `grep` alternative
+- `bat` - `cat` alternative with syntax highlighting
+- `eza` - fast `ls` alternative
+- `kitty` - terminal emulator
+- `starship` - prompt
+- `zoxide` - smart `cd` alternative
 
 ## Optional
 
 - `fnm` if using node
 - `pyenv` if using python
 - `rbenv` if using ruby
+- `lazygit`
+- `lazydocker`
 
 ## Usage
 
