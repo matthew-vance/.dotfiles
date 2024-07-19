@@ -6,9 +6,7 @@ _tmp/
 .tmp/
 
 # zsh
-.zcompdump*
-.zsh_sessions
-local.zsh
+home/.config/zsh/local.zsh
 *.zwc
 
 # vscode
