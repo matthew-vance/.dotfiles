@@ -10,4 +10,4 @@ antidote load
 
 autoload -Uz compinit && compinit
 
-eval "$(zoxide init zsh --cmd cd)"
+eval "$(zoxide init zsh --cmd cd)" # must come after compinit
