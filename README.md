@@ -16,7 +16,6 @@ This whole thing basically works by mirroring the layout of the home directory a
 - `bat` - `cat` alternative with syntax highlighting
 - `eza` - fast `ls` alternative
 - `kitty` - terminal emulator
-- `starship` - prompt
 - `zoxide` - smart `cd` alternative
 
 ## Optional
