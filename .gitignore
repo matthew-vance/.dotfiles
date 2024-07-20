@@ -6,8 +6,11 @@ _tmp/
 .tmp/
 
 # zsh
-home/.config/zsh/local.zsh
-*.zwc
+home/.config/zsh/.zcompdump*
+home/.config/zsh/.zcompcache
+home/.config/zsh/.local.zsh
+home/.config/zsh/.antidote
+home/.config/zsh/.zsh_plugins.zsh
 
 # vscode
 .vscode/*

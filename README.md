@@ -38,4 +38,4 @@ make uninstall
 
 ## Local config
 
-A `local.zsh` file can be placed in the `zsh` directory to add local shell config.
+A `.local.zsh` file can be placed in the `zsh` directory to add local shell config.

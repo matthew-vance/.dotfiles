@@ -5,7 +5,7 @@
 if command -v fnm &> /dev/null; then
   alias nvm="echo 'use fnm ya big, dumb, idiot'"
   export PATH="$HOME/Library/Application Support/fnm:$PATH"
-  znap eval fnm 'fnm env --use-on-cd'
+  eval "$(fnm env --use-on-cd)"
 fi
 
 export PNPM_HOME="$HOME/Library/pnpm"
