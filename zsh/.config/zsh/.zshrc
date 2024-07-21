@@ -7,7 +7,7 @@ local antidote_dir=$HOME/.antidote
 source $antidote_dir/antidote.zsh
 antidote load
 
-[[ -e $ZDOTDIR/.local.zsh ]] && source $ZDOTDIR/.local.zsh
+[[ -e $HOME/.local.zsh ]] && source $HOME/.local.zsh
 
 ZSH_COMPDUMP=$HOME/.cache/zsh/zcompdump
 autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
