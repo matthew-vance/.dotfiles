@@ -7,15 +7,11 @@ This whole thing basically works by mirroring the layout of the home directory a
 
 - `stow` - symlink manager
 - `git` - version control
-- `make` - install scripts
-- `zsh` - shell
 - `brew` - package manager
-- `neovim` - text editor
 - `fzf` - fuzzy finder
 - `ripgrep` - faster `grep` alternative
 - `bat` - `cat` alternative with syntax highlighting
 - `eza` - fast `ls` alternative
-- `kitty` - terminal emulator
 - `zoxide` - smart `cd` alternative
 
 ## Optional
@@ -28,14 +24,19 @@ This whole thing basically works by mirroring the layout of the home directory a
 
 ## Usage
 
-```sh
-make install
-```
+Clone the repo into the home directory.
 
 ```sh
-make uninstall
+git clone git@github.com:matthew-vance/dotfiles.git ~/dotfiles
 ```
 
-## Local config
+Use `stow` to symlink the config files for the desired application.
+
+```sh
+cd ~/dotfiles
+stow zsh
+```
+
+## Local zsh config
 
 A `.local.zsh` file can be placed in the `zsh` directory to add local shell config.
