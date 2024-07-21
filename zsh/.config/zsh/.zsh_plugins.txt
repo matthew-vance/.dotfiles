@@ -7,10 +7,17 @@ zsh-users/zsh-completions path:src kind:fpath
 $ZDOTDIR/homebrew.zsh
 zsh-users/zsh-autosuggestions
 zdharma-continuum/fast-syntax-highlighting kind:defer
-$ZDOTDIR/docker
+MichaelAquilina/zsh-you-should-use kind:defer
 $ZDOTDIR/fzf.zsh
-$ZDOTDIR/1password.zsh
+$ZDOTDIR/bat.zsh
 $ZDOTDIR/javascript.zsh
 $ZDOTDIR/python.zsh
 $ZDOTDIR/ruby.zsh
 davidde/git
+
+# before compinit
+$ZDOTDIR/completion.zsh
+# after compinit
+
+$ZDOTDIR/1password.zsh
+$ZDOTDIR/docker.zsh
