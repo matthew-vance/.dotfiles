@@ -5,18 +5,19 @@ sindresorhus/pure kind:fpath
 $ZDOTDIR/prompt.zsh
 zsh-users/zsh-completions path:src kind:fpath
 $ZDOTDIR/homebrew.zsh
+zdharma-continuum/fast-syntax-highlighting
 zsh-users/zsh-autosuggestions
-zdharma-continuum/fast-syntax-highlighting kind:defer
-MichaelAquilina/zsh-you-should-use kind:defer
+MichaelAquilina/zsh-you-should-use
 $ZDOTDIR/fzf.zsh
 $ZDOTDIR/bat.zsh
 $ZDOTDIR/javascript.zsh
 $ZDOTDIR/python.zsh
 $ZDOTDIR/ruby.zsh
 davidde/git
+romkatv/zsh-bench kind:path
 
 # before compinit
-$ZDOTDIR/completion.zsh
+belak/zsh-utils path:completion
 # after compinit
 
 $ZDOTDIR/1password.zsh
