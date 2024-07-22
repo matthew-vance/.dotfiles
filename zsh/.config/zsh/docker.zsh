@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
 
-# eval "$(docker completion zsh)"
+eval "$(docker completion zsh)"
