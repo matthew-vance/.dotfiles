@@ -1,7 +1,7 @@
 $ZDOTDIR/options.zsh
 $ZDOTDIR/history.zsh
 $ZDOTDIR/aliases.zsh
-sindresorhus/pure kind:fpath
+romkatv/powerlevel10k
 $ZDOTDIR/prompt.zsh
 zsh-users/zsh-completions path:src kind:fpath
 $ZDOTDIR/homebrew.zsh
@@ -16,9 +16,8 @@ $ZDOTDIR/ruby.zsh
 davidde/git
 romkatv/zsh-bench kind:path
 
-# before compinit
+# this calls compinit
 belak/zsh-utils path:completion
-# after compinit
 
 $ZDOTDIR/1password.zsh
 $ZDOTDIR/docker.zsh
