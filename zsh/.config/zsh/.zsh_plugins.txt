@@ -20,5 +20,6 @@ romkatv/zsh-bench kind:path
 # this calls compinit
 belak/zsh-utils path:completion
 
+Aloxaf/fzf-tab
 $ZDOTDIR/1password.zsh
 $ZDOTDIR/docker.zsh
