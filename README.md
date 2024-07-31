@@ -37,6 +37,18 @@ cd ~/dotfiles
 stow zsh
 ```
 
-## Local zsh config
+## zsh
+
+### Local config
 
 A `.local.zsh` file can be placed in the `zsh` directory to add local shell config.
+
+### Plugin management
+
+Plugins are managed with [Antidote](https://getantidote.github.io/). The `antidote` command is available in the shell.
+
+To update plugins and the plugin manager, run:
+
+```sh
+antidote update
+```
