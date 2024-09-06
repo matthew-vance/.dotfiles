@@ -13,6 +13,7 @@ This whole thing basically works by mirroring the layout of the home directory a
 - `bat` - `cat` alternative with syntax highlighting
 - `eza` - fast `ls` alternative
 - `zoxide` - smart `cd` alternative
+- `git-delta` - `git` diff viewer
 
 ## Optional
 
@@ -52,3 +53,7 @@ To update plugins and the plugin manager, run:
 ```sh
 antidote update
 ```
+
+## git
+
+I'm too lazy to figure out dealing with .gitconfig files on multiple machines, so just take the contents of the `dot-gitconfig` file and add it to your global git config.
