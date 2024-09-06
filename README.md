@@ -38,6 +38,8 @@ cd ~/dotfiles
 stow zsh
 ```
 
+Stow will symlink the contents of the directory, so the directory structure should mirror the stucture you want in the home directory. For example, the `zsh` directory contains the `.zshenv` file and other files in a `.config` directory. The `zsh` directory is symlinked to the home directory, so the `.zshenv` file will be symlinked to `~/.zshenv` and the `.config` directory and everything inside it will be recursivley symlinked to `~/.config`.
+
 ## zsh
 
 ### Local config
