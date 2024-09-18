@@ -8,6 +8,7 @@ _tmp/
 # zsh
 .local.zsh
 .zsh_plugins.zsh
+.zcompdump
 
 # vscode
 .vscode/*
