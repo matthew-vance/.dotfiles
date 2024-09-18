@@ -13,3 +13,7 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# bun
+export PATH="$HOME/.bun/bin:$PATH"
+[ -s $HOME/.bun/_bun ] && source $HOME/.bun/_bun
