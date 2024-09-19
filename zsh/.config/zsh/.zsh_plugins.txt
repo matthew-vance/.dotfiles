@@ -1,8 +1,6 @@
 $ZDOTDIR/options.zsh
 $ZDOTDIR/history.zsh
 $ZDOTDIR/aliases.zsh
-romkatv/powerlevel10k
-$ZDOTDIR/prompt.zsh
 zsh-users/zsh-completions path:src kind:fpath
 $ZDOTDIR/homebrew.zsh
 zdharma-continuum/fast-syntax-highlighting

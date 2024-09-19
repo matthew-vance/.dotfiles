@@ -13,5 +13,6 @@ bindkey '^[[B' history-substring-search-down
 # after compinit
 
 eval "$(zoxide init zsh --cmd cd)"
+eval "$(starship init zsh)"
 
 [[ -e $HOME/.local.zsh ]] && source $HOME/.local.zsh

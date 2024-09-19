@@ -14,6 +14,7 @@ This whole thing basically works by mirroring the layout of the home directory a
 - `eza` - fast `ls` alternative
 - `zoxide` - smart `cd` alternative
 - `git-delta` - `git` diff viewer
+- `starship` - shell prompt
 
 ## Optional
 
