@@ -2,3 +2,6 @@ git:
   commitPrefix:
     pattern: "^\\w+\\/(\\w+-\\d+).*"
     replace: "[$1] "
+  paging:
+    colorArg: always
+    pager: diff-so-fancy
