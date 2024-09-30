@@ -13,7 +13,7 @@ This whole thing basically works by mirroring the layout of the home directory a
 - `bat` - `cat` alternative with syntax highlighting
 - `eza` - fast `ls` alternative
 - `zoxide` - smart `cd` alternative
-- `diff-so-fancy` - `git` diff viewer
+- `git-delta` - `git` diff viewer
 - `starship` - shell prompt
 
 ## Optional
@@ -59,4 +59,4 @@ antidote update
 
 ## git
 
-Run `./git-config.sh` to set up the git config.
+Run `./configure-git.sh` to set up the git config.

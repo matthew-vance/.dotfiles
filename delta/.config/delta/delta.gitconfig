@@ -1,0 +1,7 @@
+[include]
+  path = themes/catppuccin.gitconfig
+[delta]
+  features = catppuccin-mocha
+  hyperlinks = true
+[delta "interactive"]
+  keep-plus-minus-markers = false
