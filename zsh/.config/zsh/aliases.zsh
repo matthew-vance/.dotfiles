@@ -58,6 +58,8 @@ alias now='date +"%T"'
 alias tf="terraform"
 alias k="kubectl"
 
+alias love="/Applications/love.app/Contents/MacOS/love"
+
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # What's running on this port?
