@@ -1,0 +1,8 @@
+font-family = "JetBrains Mono"
+font-size = 14
+theme = "catppuccin-mocha"
+window-width = 150
+window-height = 50
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+
