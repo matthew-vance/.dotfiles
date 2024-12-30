@@ -15,3 +15,9 @@ fpath=(
     $fpath
     $HOME/.local/share/zsh/site-functions
 )
+
+# Added by Toolbox App
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# Add .NET Core SDK tools
+export PATH="$PATH:$HOME/.dotnet/tools"
