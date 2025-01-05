@@ -1,5 +1,1 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-require("matthew.core")
-require("matthew.lazy")
+require("config")
