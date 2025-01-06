@@ -1,7 +1,7 @@
 return {
   {
     "ibhagwan/fzf-lua",
-    lazy = true,
+    event = { "VeryLazy" },
     dependencies = { "echasnovski/mini.icons", "nvim-tree/nvim-web-devicons" },
     opts = function()
       local actions = require("fzf-lua.actions")
@@ -24,17 +24,20 @@ return {
     keys = function()
       local fzf = require("fzf-lua")
       return {
-        -- find
+        -- files
         { "<leader><space>", fzf.files, desc = "Find files" },
         { "<leader>ff", fzf.files, desc = "Find files" },
+        { "<leader>fr", fzf.oldfiles, desc = "Find recent files" },
+
+        -- buffers
         { "<leader>,", fzf.buffers, desc = "Find buffers" },
         { "<leader>fb", fzf.buffers, desc = "Find buffers" },
-        { "<leader>fr", fzf.oldfiles, desc = "Find recent files" },
 
         -- search
         { "<leader>/", fzf.live_grep, desc = "Search text" },
         { "<leader>st", fzf.live_grep, desc = "Search text" },
         { "<leader>sw", fzf.grep_cword, desc = "Search for word under cursor" },
+        { '<leader>s"', fzf.registers, desc = "Search registers" },
 
         -- git
         { "<leader>gc", fzf.git_commits, desc = "Git commits" },
