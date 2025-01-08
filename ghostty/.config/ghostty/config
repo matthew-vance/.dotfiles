@@ -3,6 +3,7 @@ font-size = 14
 theme = "catppuccin-mocha"
 window-width = 150
 window-height = 50
+window-inherit-working-directory = false
 
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 
